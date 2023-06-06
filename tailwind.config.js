@@ -1,15 +1,28 @@
 module.exports = {
-    theme: {
-        // Some useful comment
-        fontFamily: {
-            'nunito': ['nunito', 'sans-serif'],
-            'MyFont': ['"Pacifico"', 'Pacifico']
-        },
+  theme: {
+    // Some useful comment
+    fontFamily: {
+      nunito: ["nunito", "sans-serif"],
+      MyFont: ['"Pacifico"', "Pacifico"],
     },
-    variants: {
-        // Some useful comment
+  },
+  variants: {
+    // Some useful comment
+  },
+  plugins: [
+    // Some useful comment
+  ],
+};
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    fontFamily: {
+      nunito: ["nunito", "sans-serif"],
+      MyFont: ['"Pacifico"', "Pacifico"],
     },
-    plugins: [
-        // Some useful comment
-    ]
-}
+    extend: {},
+  },
+  plugins: [],
+};

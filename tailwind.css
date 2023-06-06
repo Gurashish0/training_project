@@ -2,40 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+.new {
+}
 @layer base {
-    header span {
-        font-family: Pacifico;
-    }
+  header span {
+    font-family: Pacifico;
+  }
 
-    html {
-        scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    .title-font {
-        font-family: Pacifico;
-    }
+  .title-font {
+    font-family: Pacifico;
+  }
 
-    .main-paragraph {
-        font-family: 'Ubuntu', sans-serif;
-    }
+  .main-paragraph {
+    font-family: "Ubuntu", sans-serif;
+  }
 
-    .courses h1 {
-        font-family: Pacifico;
-    }
+  .courses h1 {
+    font-family: Pacifico;
+  }
 
-    .courses p {
-        font-family: 'Ubuntu';
-    }
+  .courses p {
+    font-family: "Ubuntu";
+  }
 
-    .course_p {
-        font-family: 'Ubuntu';
-    }
+  .course_p {
+    font-family: "Ubuntu";
+  }
 
-    .testimonial {
-        font-family: Pacifico;
-    }
+  .testimonial {
+    font-family: Pacifico;
+  }
 
-    .testimonials p {
-        font-family: Ubuntu;
-    }
+  .testimonials p {
+    font-family: Ubuntu;
+  }
 }
