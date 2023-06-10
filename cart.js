@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to add a product to the cart
 });
 
-function addToCart({ id, name, price, quantity, image }) {
-  console.log(id, name, price, quantity, image);
+function addToCart({ id, name, price, category, quantity, image }) {
+  console.log(id, name, price, category, quantity, image);
   // Create a new list item element
   const cartItemElement = document.createElement("li");
 
@@ -54,6 +54,7 @@ function addToCart({ id, name, price, quantity, image }) {
     name,
     image,
     price,
+    category,
     quantity,
     id,
   };
@@ -61,6 +62,7 @@ function addToCart({ id, name, price, quantity, image }) {
   // Add the product to local storage
   addToLocalStorage(product);
 }
+
 
 function addToLocalStorage(product) {
   var cartItems = localStorage.getItem("cartItems");
@@ -94,8 +96,8 @@ function updateCartUI() {
     cart.forEach(function (product) {
       var cartItem = document.createElement("li");
       cartItem.innerHTML = `<li class="flex py-6">
-      <div
-        class="product h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200"
+      <div 
+      class="product h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200 font:'Pacifico' "
       >
         <img
           src="${product.image}"
@@ -116,7 +118,7 @@ function updateCartUI() {
             </h3>
             <p class="price ml-4" id="total-price">Rs. ${product.price}</p>
           </div>
-          <p class="mt-1 text-sm text-gray-500">xyz</p>
+          <p class="mt-1 text-sm text-gray-500">${product.category}</p>
         </div>
         <div
           class="flex flex-1 items-end justify-between text-sm"
