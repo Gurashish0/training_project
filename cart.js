@@ -1,4 +1,9 @@
 // const cartToggle = document.getElementById("cart_toggle");
+const stripe = Stripe('pk_test_51NHsJBSFT58guQQWnpf23v809Egdx1N0MGU3lWFMqVdRdfzr8OfifsfllLtveeGzShoaACQBI1ldKKt2S5b0Be7600iETgHCiT');
+
+var elements = stripe.elements({
+
+});
 
 function toggleCart() {
   const cart = document.getElementById("cart");
@@ -175,6 +180,8 @@ function removeFromCart(productId) {
   updateCartUI();
 }
 
+var totalPrice;
+
 function updateTotalPrice() {
   var cartItems = localStorage.getItem("cartItems");
   var totalPriceElement = document.getElementById("cart-total");
@@ -184,7 +191,7 @@ function updateTotalPrice() {
     var cart = JSON.parse(cartItems);
 
     // Use the reduce() method to calculate the total price and quantity
-    var totalPrice = cart.reduce(
+    totalPrice = cart.reduce(
       function (total, product) {
         var price = parseFloat(product.price);
         var quantity = parseInt(product.quantity);
@@ -207,3 +214,6 @@ function updateTotalPrice() {
     totalQuantityElement.textContent = "0";
   }
 }
+
+
+
